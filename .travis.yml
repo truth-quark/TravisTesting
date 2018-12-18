@@ -19,3 +19,14 @@ matrix:
     env:
       - ARCH=x64
       - CC_OVERRIDE=clang
+
+script:
+  - pwd
+  - make
+  - ./hello
+  - echo "some text for a file" > tmp.txt
+  - more tmp.txt
+  - echo
+  - tail tmp.txt
+  - echo
+  - cat tmp.txt
